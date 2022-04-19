@@ -1,12 +1,18 @@
-// 전역 변수로 스택 구현하는 방법
+// 구조체 배열을 사용하여 스택 만들기
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 
-typedef char element; // 데이터의 자료형
-#define MAX_STACK_SIZE 100 // 스택의 최대 크기
-element stack[MAX_STACK_SIZE]; // 1차원 배열
+#define MAX_STACK_SIZE 100
+#define MAX_STRING 100
+
+typedef struct{
+    int student_Num;
+    char name[MAX_STRING];
+    char address[MAX_STRING];
+} element;
+
+element stack[MAX_STACK_SIZE];
 int top = -1;
 
 // 공백 상태 검출 함수
@@ -25,9 +31,7 @@ void push(element item){
         fprintf(stderr, "스택 포화 에러\n");
         return;
     }
-    else{
-        stack[++top] = item;
-    }
+    else stack[++top] = item;
 }
 
 // 삭제 함수
@@ -49,12 +53,14 @@ element peek(){
 }
 
 int main(void){
-    push(1);
-    push(2);
-    push(3);
-    push(4);
-    printf("%d\n", pop());
-    printf("%d\n", pop());
-    printf("%d\n", pop());
+    element ie = {20190001, "Hong", "Gachon Univ."};
+    element oe;
+
+    push(ie);
+    oe = pop();
+
+    printf("학번 : %d\n", oe.student_Num);
+    printf("이름 : %s\n", oe.name);
+    printf("학교 : %s\n", oe.address);
     return 0;
 }
