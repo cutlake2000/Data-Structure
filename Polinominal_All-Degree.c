@@ -8,9 +8,7 @@ typedef struct{
     float coef[MAX_DEGREE];
 } polynomial;
 
-polynomial a = {5, {10, 0, 0, 0, 6, 3}};
-
-polynomial poly_add1(polynomial A, polynomial B){
+polynomial poly_add(polynomial A, polynomial B){
     polynomial C;
     int Apos = 0, Bpos = 0, Cpos = 0;
 
@@ -48,7 +46,7 @@ int main(void){
 	polynomial c;
 	print_poly(a);
 	print_poly(b);
-	c = poly_add1(a, b);
+	c = poly_add(a, b);
 	printf("-----------------------------------------------------------------------------\n");
 	print_poly(c);
 	return 0;
