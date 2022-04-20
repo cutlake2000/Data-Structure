@@ -1,3 +1,5 @@
+// 피보나치 수열
+
 #include <stdio.h>
 
 int fibo_cal(int n){

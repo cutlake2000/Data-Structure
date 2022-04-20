@@ -1,3 +1,5 @@
+// 미로 탐색 프로그램
+
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>

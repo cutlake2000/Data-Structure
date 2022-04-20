@@ -1,3 +1,5 @@
+// 하노이 탑
+
 #include <stdio.h>
 
 void hanoi(int n, char from, char tmp, char to){
