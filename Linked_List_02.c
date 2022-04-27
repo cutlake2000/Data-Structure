@@ -1,16 +1,16 @@
 #include <stdio.h>
-#include <stdlib.c>
+#include <stdlib.h>
 
 typedef int element;
 typedef struct DListNode{
     // 이중연결 노드 타입
     element data;
     struct DListNode* llink;
-    struct DListNode* rlink
+    struct DListNode* rlink;
 } DListNode;
 
 // 이중 연결 리스트를 초기화
-void init(DListNode* phead);{
+void init(DListNode* phead){
     phead->llink = phead;
     phead->rlink = phead;
 }
