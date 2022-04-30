@@ -35,7 +35,7 @@ ListNode* concat_list(ListNode* head1, ListNode* head2){
     }
 }
 
-// 테스트 프로그램
+// 테스트 프로그램 실행
 int main(void)
 {
    ListNode* head1 = NULL;
