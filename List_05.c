@@ -26,6 +26,7 @@ ListNode* concat_list(ListNode* head1, ListNode* head2){
     if (head1 == NULL) return head2;
     else if (head2 == NULL) return head2;
     else{
+        // 유선이 사랑해
         ListNode* p;
         p = head1;
         while (p->link != NULL)
